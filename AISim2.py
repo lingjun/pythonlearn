@@ -1,4 +1,5 @@
 # Reversi.py
+# add one
 
 import random
 import sys
