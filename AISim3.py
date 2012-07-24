@@ -265,7 +265,7 @@ def getCornerSideBestMove(board, tile):
 
     # if there is no corner, return a side move.
     for x, y in possibleMoves:
-        if isOnside(x, y):
+        if isOnSide(x, y):
             return [x, y]
 
     return getComputerMove(board, tile)
@@ -342,7 +342,7 @@ for game in range(numGames):
         else:
             # O's turn.
             otherTile = 'X'
-            x, y = getComputerMove(mainBoard, 'O')
+            x, y = getCornerWorstMove(mainBoard, 'O')
             makeMove(mainBoard, 'O', x, y)
 
         if getValidMoves(mainBoard, otherTile) == []:
